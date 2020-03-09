@@ -1,12 +1,10 @@
 pragma solidity ^0.6.2;
+import "./Interfaces.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.0.0-beta.0/contracts/token/ERC20/ERC20.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.0.0-beta.0/contracts/token/ERC20/ERC20Detailed.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.0.0-beta.0/contracts/ownership/Ownable.sol";
 
-import "./interfaces/LiquidityPool.sol";
-import "./oz/token/ERC20/IERC20.sol";
-import "./oz/token/ERC20/ERC20.sol";
-import "./oz/ownership/Ownable.sol";
-import "./oz/math/SafeMath.sol";
-
-contract Pool is LiquidityPool, Ownable, ERC20, ERC20Detailed("Writing Hedge Contracts DAI", "writeDAI", 18){
+contract Pool is ILiquidityPool, Ownable, ERC20, ERC20Detailed("Writing Hedge Contracts DAI", "writeDAI", 18){
     using SafeMath for uint256;
     uint public lockedAmount;
     IERC20 public override token;
@@ -54,4 +52,3 @@ contract Pool is LiquidityPool, Ownable, ERC20, ERC20Detailed("Writing Hedge Con
         token.transfer(to, amount);
     }
 }
-

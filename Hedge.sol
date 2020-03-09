@@ -1,11 +1,4 @@
 pragma solidity ^0.6.2;
-
-import "./interfaces/Uniswap.sol";
-import "./interfaces/LiquidityPool.sol";
-import "./interfaces/PriceProvider.sol";
-import "./oz/token/ERC20/IERC20.sol";
-import "./oz/ownership/Ownable.sol";
-import "./oz/token/ERC20/ERC20.sol";
 import "./Pool.sol";
 
 struct Hedge {
@@ -23,13 +16,13 @@ contract BasicHedgeContract is Ownable {
     uint nextHedgeID;
     uint priceDecimals = 1e8;
     
-    LiquidityPool public pool;
-    PriceProvider public priceProvider;
+    ILiquidityPool public pool;
+    IPriceProvider public priceProvider;
     IUniswapFactory public exchanges;
     
     event HedgeCreated(address indexed account, uint id);
     
-    constructor(LiquidityPool lp, PriceProvider pp, IUniswapFactory ex) public {
+    constructor(ILiquidityPool lp, IPriceProvider pp, IUniswapFactory ex) public {
         pool = lp;
         priceProvider = pp;
         exchanges = ex;
@@ -87,5 +80,5 @@ contract BasicHedgeContract is Ownable {
 }
 
 contract HedgeContract is BasicHedgeContract {
-    constructor(IERC20 token, PriceProvider pp, IUniswapFactory ex) BasicHedgeContract(new Pool(token), pp, ex) public {}
+    constructor(IERC20 token, IPriceProvider pp, IUniswapFactory ex) BasicHedgeContract(new Pool(token), pp, ex) public {}
 }
