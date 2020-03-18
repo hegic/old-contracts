@@ -22,12 +22,12 @@ Both returns (premiums paid by option buyers) and potential losses (profit made 
 - Go to the [Dai Token Contract (writeContract) link](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f#writeContract)
 - Click on 'Connect to Web3'
 - Under ```1. approve```, enter the Hegic writeDai contract (```0x009c216b7e86e5c38af14fcd8c07aab3a2e7888e```) as the ```usr(address)``` 
-- Enter the amount of Dai you would live to approve under ```wad (uint256)```. For example, to approve 100 DAI:
+- Enter the amount of Dai you would like to approve under ```wad (uint256)```. For example, to approve 100 DAI:
 - 100 DAI + 000000000000000000 (18 zero's) -> 100000000000000000000
 
 <img src ="https://i.imgur.com/ap2qnbn.png" width = "400">
 
-### Step 2: Prove an amount of DAI to the writeDAI liquidity pool contract
+### Step 2: Provide an amount of DAI to the writeDAI liquidity pool contract
 
 - Go to the [Hegic writeDAI Contract (writeContract) link](https://etherscan.io/token/0x009c216b7e86e5c38af14fcd8c07aab3a2e7888e#writeContract)
 - Under ```5. provide```, enter the amount of DAI you would like to provide to the liquidity pool. For example, to provide 100 DAI:
