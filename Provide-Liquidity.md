@@ -25,7 +25,7 @@ Both returns (premiums paid by option buyers) and potential losses (profit made 
 - Enter the amount of Dai you would live to approve under 'wad (uint256)'. For example, to approve 100 DAI:
 ```100 DAI + 000000000000000000 (18 zero's) -> 100000000000000000000```
 
-![alt text](https://imgur.com/ap2qnbn.png) 
+![alt text](https://i.imgur.com/ap2qnbn.png)
 
 ### Step 2: Prove an amount of DAI to the writeDAI liquidity pool contract
 
@@ -33,7 +33,7 @@ Both returns (premiums paid by option buyers) and potential losses (profit made 
 - Under 'provide', enter the amount of DAI you would like to provide to the liquidity pool. For example, to provide 100 DAI:
 ```100 DAI + 000000000000000000 (18 zero's) -> 100000000000000000000```
 
-![alt text](https://imgur.com/ytoFTN4.png)
+![alt text](https://i.imgur.com/ytoFTN4.png)
 
 You will now receive writeDAI ERC20 in return for provided DAI. Starting from the next hedge contract that is activated by a put option buyer, you will start receiving portions of all premiums paid by hedge contract buyers. You can enable the writeDAI token address (0x009c216b7e86e5c38af14fcd8c07aab3a2e7888e) in Metamask in order to view your balance of writeDAI.
 
@@ -42,7 +42,7 @@ You will now receive writeDAI ERC20 in return for provided DAI. Starting from th
 - Go to the [Hedic writeDAI Contract (readContract) link](https://etherscan.io/token/0x009c216b7e86e5c38af14fcd8c07aab3a2e7888e#readContract)
 - Under 'shareOf', enter your ethereum address as the 'user (address)'
 
-![shareOf](https://imgur.com/261PnQL.png)
+![alt text](https://i.imgur.com/261PnQL.png)
 
 (Share in picture is ~5112 DAI)
 
@@ -54,5 +54,5 @@ You will now receive writeDAI ERC20 in return for provided DAI. Starting from th
 
 After withdrawal, your writeDAI will be burned and DAI will be sent to your ethereum address
 
-![withdraw](https://imgur.com/lXBv1Us.png)
+![alt text](https://i.imgur.com/lXBv1Us.png)
 
